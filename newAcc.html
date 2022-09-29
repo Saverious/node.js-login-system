@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<title>Create account</title>
+		
+		<!-- Including bootstrap CSS -->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+
+        <!-- Including the icon fonts stylesheet -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+        <!-- include the stylesheet file -->
+        <link rel="stylesheet" href="/stylesheets/newUser.css">
+
+        <!--Including JS file to validate new user creating an account-->
+        <script src="/javascripts/validateNewUser.js"></script>
+        
+	</head>
+	<body>
+		<div class="newUser">
+			<h1>Create new account</h1>
+			<form action="/authNewUser" method="post" onsubmit="return validateNewUser()" >
+				<label for="username">
+					<div class="icons">
+						<i class="bi bi-person-fill icon"></i>
+					</div>
+				</label>
+				<input type="text" name="username" placeholder="Username" id="username" required>
+				
+				<label for="email">
+					<div class="icons">
+						<i class="bi bi-envelope-fill icon"></i>
+					</div>
+				</label>
+				<input type="email" name="email" placeholder="Email Address" id="email" required>
+
+				<label for="password">
+					<div class="icons">
+						<i class="bi bi-file-lock2-fill icon"></i>
+					</div>
+				</label>
+				<input type="password" name="password" placeholder="Password" id="password" required>
+                <label for="confirmPassword">
+					<div class="icons">
+						<i class="bi bi-file-lock2-fill icon"></i>
+					</div>
+				</label>
+				<input type="password" name="confirmPassword" placeholder="Confirm password" id="confirmPassword" required>
+				<input type="submit" value="Submit">
+			</form>
+		</div>
+
+		<!-- Including bootstrap JS-->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+	</body>
+</html>
